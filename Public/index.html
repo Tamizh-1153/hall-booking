@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hall Booking API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <button
+        type="submit"
+        class="btn btn-primary mt-3"
+        onclick="window.location.assign('/booking.html')"
+      >
+        Click to book a hall
+      </button>
+    </nav>
+
+    <form class="mt-2" action="/hall-created" method="POST">
+      <div class="mb-3">
+        <label for="hallId" class="form-label">Hall Name</label>
+        <input name="hallId" type="text" class="form-control" id="hallId" />
+      </div>
+      <div class="mb-3">
+        <label for="seats" class="form-label">No.of.seats available</label>
+        <input
+          type="number"
+          class="form-control"
+          id="seats"
+          name="seats"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="amenities" class="form-label">Amenities</label>
+        <input
+          name="amenities"
+          type="text"
+          class="form-control"
+          id="amenities"
+        />
+      </div>
+      <div class="mb-3 form-label">
+        <label class="form-label" for="price"
+          >Price for one hour(in Rupees)</label
+        >
+        <input type="number" name="price" class="form-control" id="price" />
+      </div>
+      <button type="submit" class="btn btn-primary">Create hall</button>
+      <br>
+      <h4 class="mt-2"><a href="https://documenter.getpostman.com/view/27828237/2s93z6d4HV">Postman API docs</a></h4>
+      
+      
+      <h3 class="mt-2">To get all halls info</h3>
+      <p>
+        Copy and paste this URL <strong>"http://localhost:5000/halls"</strong>
+      </p>
+      <br />
+      <h3>To get all customers info</h3>
+      <p>
+        Copy and paste this URL
+        <strong>"http://localhost:5000/customers"</strong>
+      </p>
+      <br />
+      <h3>To get a single customers info</h3>
+      <p>
+        Copy and paste this URL
+        <strong>"http://localhost:5000/customers/customername"</strong>. Replace
+        customer name with name of the customer you want
+      </p>
+    </form>
+  </body>
+</html>
